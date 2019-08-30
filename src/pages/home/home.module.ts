@@ -6,8 +6,7 @@ import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
 import { TableroComponent } from 'src/components/tablero/tablero.component';
-import { SquareComponent } from 'src/components/square/square.component';
-
+// 
 
 
 @NgModule({
@@ -25,7 +24,7 @@ import { SquareComponent } from 'src/components/square/square.component';
   declarations: [
     HomePage,
     TableroComponent,
-    SquareComponent
+   
   ]
 })
 export class HomePageModule {}
