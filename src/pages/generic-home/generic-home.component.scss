@@ -1,0 +1,50 @@
+
+.scroll{
+    background: #f9fbfd;
+     display: flex;
+     flex-direction: row;
+     background-color: white;
+ }
+
+.show-div{
+    display: none;
+}
+
+
+ @media screen and (max-width: 1150px){
+ .scroll{
+     flex-direction: column;
+     
+    
+ }
+
+ .menu-container {
+     display: none;
+}
+
+ .show-container{
+    
+    margin-top:14%;
+    height: 100%;
+    position: fixed;
+    z-index: 1300;
+    right: 0px;
+    bottom: 0px;
+    top: 0px;
+    left: 0px;
+    background-color: #7b7b7b59;
+    display: block;
+    }
+
+ .show-div{
+    display: block;
+    background-color: #f9fbfd;
+
+ }
+ 
+
+ .image-content{
+    padding: 3% 0 0 3%;
+ }
+ 
+}   
