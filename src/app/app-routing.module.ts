@@ -25,10 +25,11 @@ const routes: Routes = [
     path: 'conoce',
     loadChildren: () => import('../pages/conoce/conoce.module').then(m => m.ConocePageModule)
   },
-  // {
-  //   path: 'conoce',
-  //   loadChildren: () => import('../pages/conoce/conoce.module').then(m => m.ConocePageModule)
-  // },
+  {
+    path: 'datos',
+    loadChildren: () => import('../pages/datos/datos.module').then(m => m.DatosPageModule)
+  },
+ 
 ];
 
 @NgModule({

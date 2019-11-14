@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment.prod';
 
 @Component({
   selector: 'app-list',
@@ -6,34 +7,63 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['list.page.scss']
 })
 export class ListPage implements OnInit {
-  private selectedItem: any;
-  private icons = [
-    'flask',
-    'wifi',
-    'beer',
-    'football',
-    'basketball',
-    'paper-plane',
-    'american-football',
-    'boat',
-    'bluetooth',
-    'build'
-  ];
-  public items: Array<{ title: string; note: string; icon: string }> = [];
-  constructor() {
-    for (let i = 1; i < 11; i++) {
-      this.items.push({
-        title: 'Item ' + i,
-        note: 'This is item #' + i,
-        icon: this.icons[Math.floor(Math.random() * this.icons.length)]
-      });
-    }
-  }
 
-  ngOnInit() {
+   public Seguro : string= 'vida'
+   public nombre: string = '';
+   public edad : number;
+   public envioNombre: string;
+   public envioEdad: number;
+   public valorAsegurado: any = 0;
+   public primaA :any = 0;
+   public primaM :any = 0;
+
+  constructor() {
+    
   }
-  // add back when alpha.4 is out
-  // navigate(item) {
-  //   this.router.navigate(['/list', JSON.stringify(item)]);
-  // }
+   
+
+  ngOnInit() {}
+
+
+
+envio(){
+
+
+  if(this.nombre == '' && this.edad <= 17){
+    alert('error')
+
+  }
+this.envioEdad = this.edad;
+this.envioNombre = this.nombre;
+
+if (this.envioEdad == 18){
+
+ this.valorAsegurado ='$ 20.000.000';
+ this.primaA = '$ 167.130';
+ this.primaM = '$ 15.460';
+ 
+ 
+ }
+ else if  (this.envioEdad == 30){
+
+  this.valorAsegurado ='$ 27.200.000';
+  this.primaA = '$ 268.442';
+  this.primaM = '$ 24.831';
+  
+  
+  }
+  else if  (this.envioEdad == 50){
+
+    this.valorAsegurado ='$ 39.200.000';
+    this.primaA = '$ 830.864';
+    this.primaM = '$ 76.855';
+    
+    
+    }
 }
+
+
+}
+
+
+

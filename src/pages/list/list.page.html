@@ -1,27 +1,52 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="success">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      List
+      ! Consulta Tu Poliza ¡
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-list>
-    <ion-item *ngFor="let item of items">
-      <ion-icon [name]="item.icon" slot="start"></ion-icon>
-      {{item.title}}
-      <div class="item-note" slot="end">
-        {{item.note}}
-      </div>
-    </ion-item>
-  </ion-list>
-  <!--
-    <div *ngIf="selectedItem" padding>
-      You navigated here from <b>{{selectedItem.title }}</b>
-    </div>
-  -->
+<ion-content> 
+
+
+  
+    <form style="padding: 50px" >
+        <ion-item>
+          <ion-label>Digita Tu Nombre :</ion-label>
+          <ion-input type="text" [(ngModel)]="this.nombre" name="firts" aria-placeholder="username"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label>Digita Tu Edad :</ion-label>
+          <ion-textarea type="text" [(ngModel)]="this.edad"  name="second"></ion-textarea>
+        </ion-item>
+        <ion-button type="submit" (click)="envio()">Cotizar</ion-button>
+
+        
+       
+      </form>
+
+<div class="card4">
+      <label for="name1">Nombre :</label>
+      {{envioNombre}} <br>
+      <label for="name1">Edad :</label>
+     {{envioEdad}}<br>
+     <label for="name1">Valor Asegurado :</label>
+     {{valorAsegurado}}<br>
+     <label for="name1">Prima Anual :</label>
+     {{primaA}}<br>
+     <label for="name1">Prima Mensual :</label>
+     {{primaM}}<br>
+</div>
+     
+<!-- 
+  <p>Tipo De Seguro  : {{Seguro}}</p>
+  <label for="name">Nombre</label>
+  <input type="text" >
+  <ion-button shape="round">Round Button</ion-button> -->
+    
+  <!-- {{nombre}} -->
+  
 </ion-content>
