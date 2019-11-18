@@ -7,7 +7,7 @@ import { Component, OnInit,ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.Emulated
 })
 export class GenericHomeComponent implements OnInit {
-
+  acordeonAbierto = false;
   navigatorHide: string = "menu-container";
   constructor() { }
 
@@ -21,6 +21,12 @@ export class GenericHomeComponent implements OnInit {
    */
   hideNavigator(){
       this.navigatorHide = this.navigatorHide === "menu-container" ? "show-container" :"menu-container"
+  }
+
+
+  toggleExpanded(){
+  this.acordeonAbierto = true;
+
   }
   
 }

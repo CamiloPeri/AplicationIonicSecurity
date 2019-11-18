@@ -1,9 +1,36 @@
-.card4{
-
-    width: 90%;
-    border:1px solid black;
-    padding: 50px;
-    margin-left: auto;
-    margin-right: auto;
+.card1{
+    display: inline-block;
+    border:1px solid  rgb(139, 153, 143);
+  
     border-radius:6px;
+    box-shadow: 2px 2px 3px rgb(108, 138, 117);
 }
+
+.boton {
+    border-radius: 3px;
+    color: black;
+    background-color:#60baca;
+    padding: 12px;
+}
+
+
+.boton:hover{
+    cursor: pointer;
+    background-color:#37ac53;
+    color: white;
+
+}
+
+.color{
+
+    background-color: black;
+}
+
+.margin {
+    color: darkgreen;
+        margin-left: 12px;
+        border-bottom: 1px solid rgb(161, 161, 161);
+        padding-bottom: 6px;
+}
+
+ 

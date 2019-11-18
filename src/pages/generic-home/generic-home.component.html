@@ -1,28 +1,77 @@
- <ion-split-pane>
+<ion-split-pane>
   <ion-menu type="overlay">
     <ion-header>
       <ion-toolbar color="success">
-      
-        <ion-title > <img class="imagen" src="assets/img/fastlife.png" alt=""></ion-title>
+
+        <ion-title> <img class="imagen" src="assets/img/fastlife.png" alt=""></ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content>
       <ion-list>
         <ion-item>
-          <ion-label><a  style="text-decoration: none" [routerLink]="['/home']">Inicio</a></ion-label>
+          <ion-icon name="home" slot="end"></ion-icon>
+          <ion-label>
+
+            <a style="text-decoration: none" [routerLink]="['/home']">Inicio</a>
+          </ion-label>
         </ion-item>
         <ion-item>
-          <ion-label> <a style="text-decoration: none">Seguro</a></ion-label>
+          <ion-icon name="apps" slot="end"></ion-icon>
+          <ion-label> <a style="text-decoration: none" (click)="toggleExpanded()">Seguro</a></ion-label>
+
+          <ion-list *ngIf="acordeonAbierto">
+            <li>fgggg</li>
+          </ion-list>
         </ion-item>
-         <ion-item>
+
+
+        <ion-item>
+          <ion-icon name="calculator" slot="end"></ion-icon>
           <ion-label> <a style="text-decoration: none" [routerLink]="['/home/list']">Cotiza En Linea</a></ion-label>
         </ion-item>
-        
-
-        <ion-button [routerLink]="['/login']">Cerrar sesion</ion-button>
       </ion-list>
     </ion-content>
   </ion-menu>
   <ion-router-outlet main></ion-router-outlet>
-</ion-split-pane> 
+</ion-split-pane>
 
+
+<ion-split-pane>
+  <ion-menu type="overlay">
+    <ion-header>
+      <ion-toolbar color="success">
+
+        <ion-title> <img class="imagen" src="assets/img/fastlife.png" alt=""></ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item>
+          <ion-icon name="home" slot="end"></ion-icon>
+          <ion-label>
+
+            <a style="text-decoration: none" [routerLink]="['/home']">Inicio</a>
+          </ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-icon name="arrow-dropright" slot="end"></ion-icon>
+          <ion-label (click)="toggleExpanded()"> <a style="text-decoration: none">Seguro</a></ion-label>
+
+        </ion-item>
+        <ion-item *ngIf="acordeonAbierto">
+          <ul>
+            <ion-label> <a style="text-decoration: none" [routerLink]="['/home/exclusion']">  <ion-icon name="arrow-dropright" slot="end"></ion-icon>Exclusiones</a></ion-label>
+            <ion-label> <a style="text-decoration: none" [routerLink]="['/home/cobertura']">  <ion-icon name="arrow-dropright" slot="end"></ion-icon>Coberturas</a></ion-label>
+          </ul>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="calculator" slot="end"></ion-icon>
+          <ion-label> <a style="text-decoration: none" [routerLink]="['/home/list']">Cotiza En Linea</a></ion-label>
+        </ion-item>
+       
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet main></ion-router-outlet>
+</ion-split-pane>

@@ -23,7 +23,7 @@ import { TableroComponent } from 'src/components/tablero/tablero.component';
     ])
   ],
   declarations: [
-    HomePage,
+    // HomePage,
     TableroComponent,
    
   ]

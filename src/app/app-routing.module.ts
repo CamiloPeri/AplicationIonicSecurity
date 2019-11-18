@@ -29,6 +29,15 @@ const routes: Routes = [
     path: 'datos',
     loadChildren: () => import('../pages/datos/datos.module').then(m => m.DatosPageModule)
   },
+  {
+    path: 'exclusion',
+    loadChildren: () => import('../pages/exclusion/exclusion.module').then(m => m.ExclusionPageModule)
+  },
+  {
+    path: 'cobertura',
+    loadChildren: () => import('../pages/cobertura/cobertura.module').then(m => m.CoberturaPageModule)
+  },
+
  
 ];
 

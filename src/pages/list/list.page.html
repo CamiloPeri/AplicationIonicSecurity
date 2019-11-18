@@ -5,48 +5,80 @@
     </ion-buttons>
     <ion-title>
       ! Consulta Tu Poliza ¡
+      <ion-button [routerLink]="['/login']" style="float: right;" color="danger"><ion-icon name="log-out"></ion-icon></ion-button>
+
+      <!-- <ion-button style="float: right;"></ion-button> -->
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content> 
-
-
+<ion-content>
   
-    <form style="padding: 50px" >
-        <ion-item>
-          <ion-label>Digita Tu Nombre :</ion-label>
-          <ion-input type="text" [(ngModel)]="this.nombre" name="firts" aria-placeholder="username"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-label>Digita Tu Edad :</ion-label>
-          <ion-textarea type="text" [(ngModel)]="this.edad"  name="second"></ion-textarea>
-        </ion-item>
-        <ion-button type="submit" (click)="envio()">Cotizar</ion-button>
+  
 
-        
-       
-      </form>
 
-<div class="card4">
-      <label for="name1">Nombre :</label>
-      {{envioNombre}} <br>
-      <label for="name1">Edad :</label>
-     {{envioEdad}}<br>
-     <label for="name1">Valor Asegurado :</label>
-     {{valorAsegurado}}<br>
-     <label for="name1">Prima Anual :</label>
-     {{primaA}}<br>
-     <label for="name1">Prima Mensual :</label>
-     {{primaM}}<br>
-</div>
-     
-<!-- 
-  <p>Tipo De Seguro  : {{Seguro}}</p>
-  <label for="name">Nombre</label>
-  <input type="text" >
-  <ion-button shape="round">Round Button</ion-button> -->
+
+  <div class="card-deck mt-4 ml-3 mr-2">
+      <div class="card mr-3" >
+          <div class="card1 col-6 col-md-12">
+              <h5 class="margin">Datos personales</h5>
+              <div class="card-body">
+                <ion-item>
+                  <ion-label>Nombre:</ion-label>
+                  <ion-input type="text" [(ngModel)]="this.nombre" name="firts" aria-placeholder="username"></ion-input>
+                </ion-item>
+          
+                <ion-item>
+                  <ion-label>Apellido :</ion-label>
+                  <ion-input type="text" [(ngModel)]="this.apellido" name="firts" aria-placeholder="username"></ion-input>
+                </ion-item>
+          
+                <ion-item style="margin-bottom: 20px;">
+                  <ion-label>Edad :</ion-label>
+                  <ion-input type="text" [(ngModel)]="this.edad" name="firts" aria-placeholder="username"></ion-input>
+                </ion-item>
+                <ion-label>Genero</ion-label>
+                <div class="alert alert-success" role="alert">
+                    
+                  <div class="custom-control custom-radio">
+                    <input type="radio" class="custom-control-input" id="femenino" name="defaultExampleRadios">
+                    <label class="custom-control-label" for="femenino">Femenino</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                      <input type="radio" class="custom-control-input" id="Masculino" name="defaultExampleRadios">
+                      <label class="custom-control-label" for="Masculino">Masculino</label>
+                    </div>
+                </div>
+          
+          
+                <button class="boton" type="submit" (click)="envio()">Cotizar</button>
+              </div>
+            </div>
+
+      </div>
+      
+      <div class="card" *ngIf="tabla">
+          <h5 class="margin">Protegelos</h5>
+          <table class="table" *ngIf="tabla">
+            
+              <thead class="thead-dark">
+                <tr>
+                  
+                  <th scope="col">Valor asegurado</th>
+                  <th scope="col">Prima anual</th>
+                  <th scope="col">Prima mensual</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{{valorAsegurado}}</td>
+                  <td>{{primaA}}</td>
+                  <td>{{primaM}}</td>
+                </tr>
+              </tbody>
+            </table>
+      </div>
+    </div>
     
-  <!-- {{nombre}} -->
-  
+
 </ion-content>

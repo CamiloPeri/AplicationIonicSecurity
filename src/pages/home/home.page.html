@@ -5,12 +5,13 @@
     </ion-buttons>
     <ion-title >
      Inicio
+     <ion-button  color="danger" [routerLink]="['/login']" style="float: right;"><ion-icon name="log-out"></ion-icon></ion-button>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <app-tablero></app-tablero>
+    <app-tablero ></app-tablero>
     
    
 </ion-content>

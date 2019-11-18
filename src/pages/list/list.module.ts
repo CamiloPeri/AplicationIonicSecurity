@@ -5,6 +5,8 @@ import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 
 import { ListPage } from './list.page';
+import {DataTableModule} from "angular-6-datatable";
+
 
 
 @NgModule({
@@ -12,6 +14,8 @@ import { ListPage } from './list.page';
     CommonModule,
     FormsModule,
     IonicModule,
+    DataTableModule,
+
     RouterModule.forChild([
       {
         path: '',

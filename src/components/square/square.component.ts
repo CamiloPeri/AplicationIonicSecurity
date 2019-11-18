@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { ToastrService } from 'ngx-toastr';
@@ -13,8 +13,11 @@ import {Login} from '../../models/login'
 })
 export class SquareComponent implements OnInit {
 
+  @Input() invitado: string;
+
  public username = '';
  public password = '';
+// public invitado: string;
 
   constructor(private router: Router,
     private toastr: ToastrService,
@@ -44,6 +47,14 @@ if(this.username == 'wendy' && this.password == '1234567'){
 
   this.toastr.warning('Error de Credenciales', 'Intente Nuevamente!');
 }
+}
+
+
+
+signIn(){
+  this.invitado="Invitado"
+  this.toastr.success('Operación Exitosa!', 'Acceso como invitado');
+  this.router.navigate(['/home'])
 }
 
 }
