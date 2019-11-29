@@ -4,12 +4,11 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'home',
     pathMatch: 'full'
   },
 
 
-  { path: "login", loadChildren: "../pages/login/login.module#LoginPageModule" },
   // { path: "home", loadChildren: "../pages/generic-home/generic-home.module#GenericHomeModule" },
 
   { path: "home", loadChildren: "../pages/generic-home/generic-home.module#GenericHomeModule" },
@@ -37,6 +36,10 @@ const routes: Routes = [
     path: 'cobertura',
     loadChildren: () => import('../pages/cobertura/cobertura.module').then(m => m.CoberturaPageModule)
   },
+
+
+  
+ 
 
  
 ];

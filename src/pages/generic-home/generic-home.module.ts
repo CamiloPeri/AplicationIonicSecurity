@@ -1,3 +1,8 @@
+import { SaludComponent } from './../../components/salud/salud.component';
+import { DatosPersonalesComponent } from './../../components/datos-personales/datos-personales.component';
+import { RequerimientosComponent } from './../../components/requerimientos/requerimientos.component';
+import { PagoComponent } from './../../components/pago/pago.component';
+
 
 
 import { NgModule } from "@angular/core";
@@ -33,8 +38,12 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
           { path: 'list', component: ListPage },
           { path: 'conoce', component: ConocePage },
           { path: 'datos', component: DatosPage },
+          { path: 'cobertura', component: CoberturaPage },
           { path: 'exclusion', component: ExclusionPage },
-          { path: 'cobertura', component: CoberturaPage }
+          { path: 'Datospersonales', component: DatosPersonalesComponent },
+          { path: 'requerimientos', component: RequerimientosComponent },
+          { path: 'pago', component: PagoComponent },
+          { path: 'salud', component: SaludComponent },    
           
 
         ]
@@ -42,14 +51,19 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     ])
   ],
   declarations: 
-  [GenericHomeComponent, 
+  [
+    GenericHomeComponent, 
     TableroComponent, 
     HomePage,
     ListPage,
     ConocePage,
     DatosPage,
     ExclusionPage,
-    CoberturaPage
+    CoberturaPage,
+    PagoComponent,
+    SaludComponent,
+    RequerimientosComponent,
+    DatosPersonalesComponent
   ]
 })
 export class GenericHomeModule {}

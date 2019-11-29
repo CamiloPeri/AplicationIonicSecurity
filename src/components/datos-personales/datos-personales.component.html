@@ -1,0 +1,63 @@
+<ion-card-content  >
+    <div class="card mr-3">
+        <div class="card1 col-12 " style="box-shadow: 2px 3px 3px 1px gray; border-radius: 5px;">
+            
+          <div class="card-body">
+              <div class="alert alert-info" role="alert" style="text-align: center; font-size: 30px; width: auto; margin-left: -15px;">
+                  Datos Personales
+                </div>
+            <form #ngValidadorInicial='ngForm' novalidate ngDefaultControl>
+              <ion-item>
+                <ion-label class="nombre"><ion-icon name="contact" style="font-size: 35px;"></ion-icon></ion-label>
+                <ion-input type="text" placeholder="Nombre" [(ngModel)]="this.cliente.nombre" name="nombre" aria-placeholder="username"
+                  required></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label class="apellido"><ion-icon name="contacts"  style="font-size: 35px;"></ion-icon></ion-label>
+                <ion-input type="text" placeholder="Apellido" #nombre="ngModel" [(ngModel)]="this.cliente.apellido" name="apellido"
+                  aria-placeholder="username" [class.is-valid]="nombre.valid && (nombre.dirty || nombre.touched)"
+                  required>
+                </ion-input>
+              </ion-item>
+              <ion-item>
+                  <ion-label class="correo"><ion-icon name="contacts"  style="font-size: 35px;"></ion-icon></ion-label>
+                  <ion-input type="text" placeholder="correo" #correo="ngModel" [(ngModel)]="this.cliente.correo" name="correo"
+                    aria-placeholder="username" [class.is-valid]="correo.valid && (correo.dirty || correo.touched)"
+                    required>
+                  </ion-input>
+                </ion-item>
+              <ion-item>
+                  <ion-label class="telefono"><ion-icon name="call" style="font-size: 35px;"></ion-icon></ion-label>
+                  <ion-input type="number" placeholder="Telefono" #telefono="ngModel" [(ngModel)]="this.cliente.telefono" name="telefono"
+                    aria-placeholder="username" [class.is-valid]="telefono.valid && (telefono.dirty || telefono.touched)"
+                    required>
+                  </ion-input>
+                </ion-item>
+              <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched) && nombre.errors['required']"
+                class="invalid-tooltip">
+                Este campo es obligatorio
+              </div>
+              <ion-item style="margin-bottom: 20px;">
+                <ion-label class="edad"><ion-icon name="hand" style="font-size: 35px;"></ion-icon></ion-label>
+                <ion-input type="number" #edad="ngModel" placeholder="Edad" [(ngModel)]="this.cliente.edad" name="edad"
+                  aria-placeholder="username" required></ion-input>
+                <div *ngIf="edad.invalid && (edad.dirty || edad.touched) && edad.errors['required']"
+                  class="invalid-tooltip" required>
+                  Este campo es obligatorio
+                </div>
+              </ion-item>
+              <ion-item>
+                <ion-label class="genero"><ion-icon name="female" style="font-size: 30px;">
+                </ion-icon><ion-icon name="male" style="font-size: 30px;"></ion-icon></ion-label>
+                <ion-select placeholder="Seleccione" required>
+                  <ion-select-option value="f">Femenino</ion-select-option>
+                  <ion-select-option value="m">Masculino</ion-select-option>
+                </ion-select>
+              </ion-item>
+             
+            </form>
+          </div>
+        </div>
+      </div>
+</ion-card-content>
+

@@ -30,7 +30,7 @@ const routes: Routes = [
     ])
   ],
   declarations: [
-    ConocePage,
+    // ConocePage,
 
     
   ]

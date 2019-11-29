@@ -1,36 +1,78 @@
-.card1{
-    display: inline-block;
-    border:1px solid  rgb(139, 153, 143);
+
+
+.margin{
+
+    margin-left: 15px;
+}
+    .linea{
+        border: 1px solid gray;
+       
+    }
+
+    .card{
+
+        height:max-content;
+    }
+
+    .edad{
+        background-color: #F3B67D;
+        border: 1px solid #F3B67D ;
+        padding: 7px;
+        width: 15%;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    .nombre{
+        background-color: #F3B67D;
+        border: 1px solid #F3B67D ;
+        padding: 7px;
+        width: 15%;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    .apellido{
+        background-color: #F3B67D;
+        border: 1px solid #F3B67D ;
+        padding: 7px;
+        width: 15%;
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    .genero{
+
+        // background-color: #F6A457;
+        // border: 1px solid #F6A457 ;
+        padding: 7px;
+        width: -6%;
+        border-radius: 20px;
+    }
+
+
+    .cuadrado{
+        width:150px;
+        height:150px;
+        background-color:#2980b9;
+        margin: 20px;
+        color:#fff;
+        line-height:150px;
+    }
+    
+    .cuadrado:hover{
+        background-color:#c0392b;
+        width:200px;
+        box-shadow:0px 0px 6px #000;
+    }
+    
+    #transition{
+      -webkit-transition: background-color 2s ease-out, width 1s ease, box-shadow 1s linear;
+      -moz-transition:background-color 2s ease-out, width 1s ease, box-shadow 1s linear;
+      -o-transition: background-color 2s ease-out, width 1s ease, box-shadow 1s linear;
+      -ms-transition:background-color 2s ease-out, width 1s ease, box-shadow 1s linear;
+      transition: background-color 2s ease-out, width 1s ease, box-shadow 1s linear;
+    }
+    
+
   
-    border-radius:6px;
-    box-shadow: 2px 2px 3px rgb(108, 138, 117);
-}
-
-.boton {
-    border-radius: 3px;
-    color: black;
-    background-color:#60baca;
-    padding: 12px;
-}
-
-
-.boton:hover{
-    cursor: pointer;
-    background-color:#37ac53;
-    color: white;
-
-}
-
-.color{
-
-    background-color: black;
-}
-
-.margin {
-    color: darkgreen;
-        margin-left: 12px;
-        border-bottom: 1px solid rgb(161, 161, 161);
-        padding-bottom: 6px;
-}
-
- 
