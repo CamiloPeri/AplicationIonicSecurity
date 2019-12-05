@@ -35,8 +35,9 @@ export class ListPage implements OnInit {
   public Saludp = false; 
   public doc = false;
   public formas = false;
-  public formaP = false; public documentP = false; public consultaPoliza = true; public tab = false; public botonS = false; public botonDatos = false; public botonSalud = false; public botonDocumentos = false; public boton1 =true;
-  public boton2= false; public boton3 = false;
+  public formaP = false; public documentP = false; public consultaPoliza = true; public tab = false; public botonS = false; 
+  public botonDatos = false; public botonSalud = false; public botonDocumentos = false; public boton1 =true;
+  public boton2= false; public boton3 = false; public footer =false;
   contacto: FormGroup;
   submitted = false;
 
@@ -58,46 +59,18 @@ export class ListPage implements OnInit {
   }
 
 
-  async presentToast() {
-    const toast = await this.toastController.create({
-      
-      duration: 2000
-    });
-    toast.present();
-  }
-
-  async presentToastWithOptions() {
-    const toast = await this.toastController.create({
-      header: 'Toast header',
-      message: 'Click to Close',
-      position: 'top',
-      buttons: [
-        {
-          side: 'start',
-          icon: 'star',
-          text: 'Favorite',
-          handler: () => {
-            console.log('Favorite clicked');
-          }
-        }, {
-          text: 'Done',
-          role: 'cancel',
-          handler: () => {
-            console.log('Cancel clicked');
-          }
-        }
-      ]
-    });
-    toast.present();
-  }
-
   ngOnInit() {
     this.tab = false;
+    this.boton1= false;
+    this.boton2 = false;
+    this.boton3 = false;
+    this.footer = false;
     
   }
 
   datosPersonales() {
     this.datosP = true;
+    this.Saludp = true;
     this.consultaPoliza = false;
     this.router.navigate(['home/list/Datospersonales']);
   }
@@ -119,10 +92,10 @@ export class ListPage implements OnInit {
     this.boton3 = true;
     this.doc = true;
     this.formas= false; 
-    this.botonSalud = true;
+    this.botonSalud = false;
     this.documentP = true;
     this.Saludp = false;
-    this.router.navigate(['home/list/requerimientos']);
+        this.router.navigate(['home/list/requerimientos']);
   }
 
 
@@ -130,8 +103,10 @@ export class ListPage implements OnInit {
     this.boton3=false;
     this.formas= true;
     this.doc = false;
+    this.botonSalud=true;
     this.botonDocumentos = true;
     this.formaP = true;
+    this.Saludp = false;
     this.router.navigate(['home/list/pago']);
 
   }
@@ -142,6 +117,8 @@ export class ListPage implements OnInit {
     this.consultaPoliza = false;
     this.tab = true;
     this.datosP = true;
+    this.boton1 = true;
+    this.footer = true;
   }
 
 

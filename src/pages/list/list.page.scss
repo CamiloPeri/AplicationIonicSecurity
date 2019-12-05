@@ -15,39 +15,25 @@
     }
 
     .edad{
-        background-color: #F3B67D;
-        border: 1px solid #F3B67D ;
         padding: 7px;
-        width: 15%;
-        border-radius: 20px;
-        text-align: center;
+        
     }
 
     .nombre{
-        background-color: #F3B67D;
-        border: 1px solid #F3B67D ;
         padding: 7px;
-        width: 15%;
-        border-radius: 20px;
-        text-align: center;
+       
     }
 
     .apellido{
-        background-color: #F3B67D;
-        border: 1px solid #F3B67D ;
+       
         padding: 7px;
-        width: 15%;
-        border-radius: 20px;
-        text-align: center;
+        
     }
 
     .genero{
 
-        // background-color: #F6A457;
-        // border: 1px solid #F6A457 ;
         padding: 7px;
-        width: -6%;
-        border-radius: 20px;
+       
     }
 
 
@@ -75,4 +61,17 @@
     }
     
 
+    footer{
+
+        // border: 2px solid black;
+        height: 10%;
+    }
+
+    .botondate{
+        padding: 8px;
+        margin: 4px;
+        width: auto;
+        font-size: 37px;
+        border-radius: 50%;
+    }
   

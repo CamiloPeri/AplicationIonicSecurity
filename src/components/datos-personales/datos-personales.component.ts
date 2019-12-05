@@ -1,5 +1,6 @@
 import { Formulario } from './../../models/formulario';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { NgForm, AbstractControl } from '@angular/forms';
 
 @Component({
   selector: 'app-datos-personales',
@@ -7,6 +8,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./datos-personales.component.scss'],
 })
 export class DatosPersonalesComponent implements OnInit {
+
+  @ViewChild('ngValidadorInicial', { static: false }) public ngValidadorInicial: NgForm;
   @Input() public cliente: Formulario;
   constructor() { }
 
@@ -14,6 +17,19 @@ export class DatosPersonalesComponent implements OnInit {
     debugger
     this.cliente;
     console.log(this.cliente)
+  }
+
+
+  isFormularioValido(nombreValidador: NgForm): boolean {
+    Object.keys(nombreValidador.controls).forEach(controlKey => {
+      const control = nombreValidador.form.controls[controlKey] as AbstractControl;
+      control.markAsDirty();
+      control.markAsTouched();
+      control.updateValueAndValidity();
+    });
+    this.ngValidadorInicial.form.updateValueAndValidity();
+    const formularioValido: boolean = nombreValidador.form.valid;
+    return formularioValido;
   }
 
 }

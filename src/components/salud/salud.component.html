@@ -1,25 +1,48 @@
 <div class="alert alert-primary" role="alert">
     ¡Sufre o ha sufrido de alguna enfermedad degenerativa?
-    si , no  ¿cual?
+    si <ion-checkbox checked="false" [disabled]="check1" (click)="presion1()"></ion-checkbox> , No <ion-checkbox
+        checked="false" [disabled]="check2"></ion-checkbox> ¿cual? <ion-item *ngIf="textArea">
+        <ion-textarea clearOnEdit="true"></ion-textarea>
+    </ion-item>
 </div>
 <div class="alert alert-secondary" role="alert">
     ¿Eres adicto a alguna de esta sustancias?
 
+    <ul>
+        <li>  <ion-checkbox checked="false" [disabled]="checkA" style="margin-right: 5px; " ></ion-checkbox>Alucinógenos</li>
+        <li>  <ion-checkbox checked="false" [disabled]="checkC" style="margin-right: 5px; " ></ion-checkbox>Cerveza</li>
+        <li> <ion-checkbox checked="false" [disabled]="checki"  style="margin-right: 5px; "></ion-checkbox>Cigarrillo</li>
+        <li> <ion-checkbox checked="false" [disabled]="checkN"  style="margin-right: 5px; "></ion-checkbox>Ninguno</li>       
+        
+    </ul>
+   
+
 </div>
 <div class="alert alert-success" role="alert">
     ¿Practicas algun deporte de alto riesgo?
+    si <ion-checkbox checked="false" [disabled]="check1" (click)="presion3()"></ion-checkbox> , No <ion-checkbox
+        checked="false" [disabled]="check3"></ion-checkbox> ¿cual? <ion-item *ngIf="textArea2">
+        <ion-textarea clearOnEdit="true"></ion-textarea>
+    </ion-item>
 </div>
 <div class="alert alert-danger" role="alert">
     ¿Tiernes alguna enfermedad de transmision sexual?
-    si , no  ¿cual?
+    si <ion-checkbox checked="false" [disabled]="check1" (click)="presion4()"></ion-checkbox> , No <ion-checkbox
+        checked="false" [disabled]="check4"></ion-checkbox> ¿cual? <ion-item *ngIf="textArea3">
+        <ion-textarea clearOnEdit="true"></ion-textarea>
+    </ion-item>
 </div>
 
 <div class="alert alert-danger" role="alert">
     ¿Ha sufrido fracturas en su cuerpo?
+    si <ion-checkbox checked="false" [disabled]="check1" (click)="presion5()"></ion-checkbox> , No <ion-checkbox
+        checked="false" [disabled]="check5"></ion-checkbox> ¿cual? <ion-item *ngIf="textArea4">
+                <ion-textarea clearOnEdit="true"></ion-textarea>
+            </ion-item>
+
 </div>
 <div class="alert alert-danger" role="alert">
-        ¿Alguno de sus familiares ha sufrido de algun cáncer?
-    </div>
-
-
-    
+    ¿Alguno de sus familiares ha sufrido de algun cáncer?
+    si <ion-checkbox checked="false" [disabled]="check1" (click)="presion6()"></ion-checkbox> , No <ion-checkbox
+        checked="false" [disabled]="check6"></ion-checkbox>
+</div>
