@@ -6,7 +6,7 @@ import {Router} from "@angular/router";
 
 import { ConocePage } from 'src/pages/conoce/conoce.page';
 import { HomePage } from 'src/pages/home/home.page';
-import {SquareComponent} from 'src/components/square/square.component';
+
 import Swal from 'sweetalert2'
 import { ListPage } from 'src/pages/list/list.page';
 

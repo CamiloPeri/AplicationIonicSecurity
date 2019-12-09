@@ -1,186 +1,171 @@
 <ion-header *ngIf="consultaPoliza">
-  <ion-toolbar color="success">
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>
-      ! Consulta Tu Poliza ¡
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar color="success">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            ! Consulta Tu Poliza ¡
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 <ion-header *ngIf="datosP">
-  <ion-toolbar color="success">
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>
-      Formulario
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar color="success">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            Formulario
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 <ion-header *ngIf="Saludp">
-  <ion-toolbar color="success">
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>
-      Salud
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar color="success">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            Salud
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 <ion-header *ngIf="doc">
-  <ion-toolbar color="success">
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>
-      Documentos
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar color="success">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            Documentos
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 <ion-header *ngIf="formas">
-  <ion-toolbar color="success">
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title>
-      Formas de pago
-    </ion-title>
-  </ion-toolbar>
+    <ion-toolbar color="success">
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            Formas de pago
+        </ion-title>
+    </ion-toolbar>
 </ion-header>
 <ion-content>
-  <div *ngIf="datosP">
-    <app-datos-personales [cliente]="cliente"></app-datos-personales>
-  </div>
-  <div *ngIf="Saludp">
-    <app-salud></app-salud>
-  </div>
-  <div *ngIf="doc">
-    <app-requerimientos></app-requerimientos>
-  </div>
-  <div *ngIf="formas">
-    <app-pago></app-pago>
-  </div>
+    <div *ngIf="datosP">
+        <app-datos-personales [cliente]="cliente"></app-datos-personales>
+    </div>
+    <div *ngIf="Saludp">
+        <app-salud></app-salud>
+    </div>
+    <div *ngIf="doc">
+        <app-requerimientos></app-requerimientos>
+    </div>
+    <div *ngIf="formas">
+        <app-pago></app-pago>
+    </div>
 
-  <div class="card-deck mt-4 ml-3 mr-2" *ngIf="consultaPoliza">
-    <div class="card mr-3">
-      <div class="card1 col-12 " style="box-shadow: 2px 3px 3px 1px gray; border-radius: 5px;">
+    <div class="card-deck mt-4 ml-3 mr-2" *ngIf="consultaPoliza">
+        <div class="card mr-3">
+            <div class="card1 col-12 " style="box-shadow: 2px 3px 3px 1px gray; border-radius: 5px;">
 
-        <div class="card-body">
-          <div class="alert alert-warning" role="alert"
-            style="text-align: center; font-size: 30px; width: auto; margin-left: -15px;">
-            Formulario
-          </div>
-          <form #ngValidadorInicial='ngForm' novalidate ngDefaultControl>
-            <ion-item>
-              <ion-label class="nombre">
-                <ion-icon name="contact" style="font-size: 35px;"></ion-icon>
-              </ion-label>
-              <ion-input type="text" placeholder="Nombre" [(ngModel)]="this.cliente.nombre" name="nombre"
-                aria-placeholder="username" required></ion-input>
-            </ion-item>
-            <ion-item>
-              <ion-label class="apellido">
-                <ion-icon name="contacts" style="font-size: 35px;"></ion-icon>
-              </ion-label>
-              <ion-input type="text" placeholder="Apellido" #nombre="ngModel" [(ngModel)]="this.cliente.apellido"
-                name="apellido" aria-placeholder="username"
-                [class.is-valid]="nombre.valid && (nombre.dirty || nombre.touched)" required>
-              </ion-input>
-            </ion-item>
-            <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched) && nombre.errors['required']"
-              class="invalid-tooltip">
-              Este campo es obligatorio
+                <div class="card-body">
+                    <div class="alert alert-warning" role="alert" style="text-align: center; font-size: 30px; width: auto; margin-left: -15px;">
+                        Formulario
+                    </div>
+                    <form #ngValidadorInicial='ngForm' novalidate ngDefaultControl>
+                        <ion-item>
+                            <ion-label class="nombre">
+                                <ion-icon name="contact" style="font-size: 35px;"></ion-icon>
+                            </ion-label>
+                            <ion-input type="text" placeholder="Nombre" [(ngModel)]="this.cliente.nombre" name="nombre" aria-placeholder="username" required></ion-input>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label class="apellido">
+                                <ion-icon name="contacts" style="font-size: 35px;"></ion-icon>
+                            </ion-label>
+                            <ion-input type="text" placeholder="Apellido" #nombre="ngModel" [(ngModel)]="this.cliente.apellido" name="apellido" aria-placeholder="username" [class.is-valid]="nombre.valid && (nombre.dirty || nombre.touched)" required>
+                            </ion-input>
+                        </ion-item>
+                        <div *ngIf="nombre.invalid && (nombre.dirty || nombre.touched) && nombre.errors['required']" class="invalid-tooltip">
+                            Este campo es obligatorio
+                        </div>
+                        <ion-item style="margin-bottom: 20px;">
+                            <ion-label class="edad">
+                                <ion-icon name="hand" style="font-size: 35px;"></ion-icon>
+                            </ion-label>
+                            <ion-input type="number" #edad="ngModel" placeholder="Edad" [(ngModel)]="this.cliente.edad" name="edad" aria-placeholder="username" required></ion-input>
+                            <div *ngIf="edad.invalid && (edad.dirty || edad.touched) && edad.errors['required']" class="invalid-tooltip" required>
+                                Este campo es obligatorio
+                            </div>
+                        </ion-item>
+                        <ion-item>
+                            <ion-label class="genero">
+                                <ion-icon name="female" style="font-size: 30px;">
+                                </ion-icon>
+                                <ion-icon name="male" style="font-size: 30px;"></ion-icon>
+                            </ion-label>
+                            <ion-select placeholder="Seleccione" required>
+                                <ion-select-option value="f">Femenino</ion-select-option>
+                                <ion-select-option value="m">Masculino</ion-select-option>
+                            </ion-select>
+                            <div *ngIf="edad.invalid && (edad.dirty || edad.touched) && edad.errors['required']" class="invalid-tooltip" required>
+                                Este campo es obligatorio
+                            </div>
+                        </ion-item>
+                        <button type="button" class="btn btn-outline-success mt-3" (click)=envio()>Cotizar</button>
+                    </form>
+                </div>
             </div>
-            <ion-item style="margin-bottom: 20px;">
-              <ion-label class="edad">
-                <ion-icon name="hand" style="font-size: 35px;"></ion-icon>
-              </ion-label>
-              <ion-input type="number" #edad="ngModel" placeholder="Edad" [(ngModel)]="this.cliente.edad" name="edad"
-                aria-placeholder="username" required></ion-input>
-              <div *ngIf="edad.invalid && (edad.dirty || edad.touched) && edad.errors['required']"
-                class="invalid-tooltip" required>
-                Este campo es obligatorio
-              </div>
-            </ion-item>
-            <ion-item>
-              <ion-label class="genero">
-                <ion-icon name="female" style="font-size: 30px;">
-                </ion-icon>
-                <ion-icon name="male" style="font-size: 30px;"></ion-icon>
-              </ion-label>
-              <ion-select placeholder="Seleccione" required>
-                <ion-select-option value="f">Femenino</ion-select-option>
-                <ion-select-option value="m">Masculino</ion-select-option>
-              </ion-select>
-              <div *ngIf="edad.invalid && (edad.dirty || edad.touched) && edad.errors['required']"
-                class="invalid-tooltip" required>
-                Este campo es obligatorio
-              </div>
-            </ion-item>
-            <button type="button" class="btn btn-outline-success mt-3" (click)=envio()>Cotizar</button>
-          </form>
         </div>
-      </div>
+
+        <div class="card" *ngIf="tabla" style="box-shadow: 2px 3px 3px 2px gray;">
+            <div class="alert alert-info" role="alert">
+                ¡Protegelos!
+            </div>
+            <table class="table linea" *ngIf="tabla">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Valor asegurado</th>
+                        <th scope="col">Prima anual</th>
+                        <th scope="col">Prima mensual</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="linea">{{valorAsegurado}}</td>
+                        <td class="linea">{{primaA}}</td>
+                        <td class="linea">{{primaM}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="button" class="btn btn-warning" (click)=adquirir()>Adquirir</button>
+
+        </div>
     </div>
 
-    <div class="card" *ngIf="tabla" style="box-shadow: 2px 3px 3px 2px gray;">
-      <div class="alert alert-info" role="alert">
-        ¡Protegelos!
-      </div>
-      <table class="table linea" *ngIf="tabla">
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col">Valor asegurado</th>
-            <th scope="col">Prima anual</th>
-            <th scope="col">Prima mensual</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="linea">{{valorAsegurado}}</td>
-            <td class="linea">{{primaA}}</td>
-            <td class="linea">{{primaM}}</td>
-          </tr>
-        </tbody>
-      </table>
-      <button type="button" class="btn btn-warning" (click)=adquirir()>Adquirir</button>
-      
-    </div>
-  </div>
-
-  <button type="button" class="btn btn-outline-success" style="z-index: 5;" *ngIf="boton1"
-    (click)=salud()>Continuar</button>
-  <button type="button" class="btn btn-outline-success" style="z-index: 99;" *ngIf="boton2"
-    (click)=Documentos()>Continuar</button>
-  <button type="button" class="btn btn-outline-success" style="z-index: 99;" *ngIf="boton3"
-    (click)=formaPago()>Finalizar</button>
+    <button type="button" class="btn btn-outline-success" style="z-index: 5; margin-left: 19px;" *ngIf="boton1" (click)=salud()>Continuar</button>
+    <button type="button" class="btn btn-outline-success" style="z-index: 99;" *ngIf="boton2" (click)=Documentos()>Continuar</button>
+    <button type="button" class="btn btn-outline-success" style="z-index: 99;" *ngIf="boton3" (click)=formaPago()>Finalizar</button>
 </ion-content>
 
 
 
 <footer style="text-align: center; " *ngIf="footer">
 
-  <button tab="schedule" [disabled]="botonDatos" class="botondate"
-    [ngStyle]="{'background-color':datosP === true ? '#A6EE7E' : '#A6EE7E' }" (click)="datosPersonales()">
+    <button tab="schedule" [disabled]="botonDatos" class="botondate" [ngStyle]="{'background-color':datosP === true ? '#A6EE7E' : '#A6EE7E' }" (click)="datosPersonales()">
     <ion-icon name="People" [ngStyle]="{'color':datosP === true ? 'black' : 'black' }"></ion-icon>
     <ion-label style="color: honeydew;"></ion-label>
   </button>
 
-  <button tab="speakers" [disabled]="botonSalud" class="botondate"
-    [ngStyle]="{'background-color':Saludp === true ? '#A6EE7E' : '#A6EE7E' }" (click)="salud()">
+    <button tab="speakers" [disabled]="botonSalud" class="botondate" [ngStyle]="{'background-color':Saludp === true ? '#A6EE7E' : '#A6EE7E' }" (click)="salud()">
     <ion-icon name="heart" [ngStyle]="{'color':Saludp === true ? 'black' : 'white' }"></ion-icon>
     <ion-label [ngStyle]="{'color':Saludp === true ? 'white' : 'white' }"></ion-label>
   </button>
 
-  <button tab="map" [disabled]="botonDocumentos" (click)="Documentos()" class="botondate"
-    [ngStyle]="{'background-color':documentP === true ? '#A6EE7E' : '#EA5349' }">
+    <button tab="map" [disabled]="botonDocumentos" (click)="Documentos()" class="botondate" [ngStyle]="{'background-color':documentP === true ? '#A6EE7E' : '#EA5349' }">
     <ion-icon name="document" [ngStyle]="{'color':documentP === true ? 'black' : 'white' }"></ion-icon>
     <ion-label [ngStyle]="{'color':documentP === true ? 'white' : 'black' }"></ion-label>
   </button>
 
-  <button tab="map" [ngStyle]="{'background-color':formaP === true ? '#A6EE7E' : '#EA5349' }" class="botondate"
-    (click)="formaPago()">
+    <button tab="map" [ngStyle]="{'background-color':formaP === true ? '#A6EE7E' : '#EA5349' }" class="botondate" (click)="formaPago()">
     <ion-icon name="card" [ngStyle]="{'color':formaP === true ? 'black' : 'white' }"></ion-icon>
     <ion-label [ngStyle]="{'color':formaP === true ? 'white' : 'black' }"></ion-label>
   </button>

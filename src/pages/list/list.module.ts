@@ -10,16 +10,19 @@ import { RouterModule } from '@angular/router';
 
 import { ListPage } from './list.page';
 import {DataTableModule} from "angular-6-datatable";
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 
 @NgModule({
   imports: [
-    CommonModule,
-    PagoComponent,
+    CommonModule,    
     FormsModule,
     IonicModule,
     DataTableModule,
+    FormsModule,                     
+    ReactiveFormsModule,
 
     RouterModule.forChild([
       {
@@ -29,10 +32,11 @@ import {DataTableModule} from "angular-6-datatable";
     ])
   ],
   declarations: [
-    RequerimientosComponent,
-    PagoComponent,
-    DatosPersonalesComponent,
-    SaludComponent
+    // RequerimientosComponent,
+    // PagoComponent,
+    // DatosPersonalesComponent,
+    // SaludComponent,
+    // PagoComponent,
    
   ]
 })

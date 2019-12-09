@@ -28,19 +28,16 @@ public textArea4=false;
 
   presion1(){
 
-    this.check2=true;
+    
     this.textArea=true;
   }  
   presion3(){
-    this.check3=true;
     this.textArea2=true;
   }
   presion4(){
-    this.check4=true;
     this.textArea3=true;
   }
   presion5(){
-    this.check5=true;
     this.textArea4=true;
   }
   presion6(){

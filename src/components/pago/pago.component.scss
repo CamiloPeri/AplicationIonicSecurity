@@ -1,13 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
-
-html, body{
-  height: 100%;
-  font-weight: 800;
+html,
+body {
+    height: 100%;
+    font-weight: 800;
 }
 
-body{
-  background: #030321;
-  font-family: Arial;
+body {
+    background: #030321;
+    font-family: Arial;
 }
 
 svg {
@@ -27,54 +27,57 @@ svg {
     animation: stroke-offset 5.5s infinite linear;
 }
 
-.text-copy:nth-child(1){
-	stroke: #4D163D;
-	animation-delay: -1;
+.text-copy:nth-child(1) {
+    stroke: #4D163D;
+    animation-delay: -1;
 }
 
-.text-copy:nth-child(2){
-	stroke: #840037;
-	animation-delay: -2s;
+.text-copy:nth-child(2) {
+    stroke: #840037;
+    animation-delay: -2s;
 }
 
-.text-copy:nth-child(3){
-	stroke: #BD0034;
-	animation-delay: -3s;
+.text-copy:nth-child(3) {
+    stroke: #BD0034;
+    animation-delay: -3s;
 }
 
-.text-copy:nth-child(4){
-	stroke: #BD0034;
-	animation-delay: -4s;
+.text-copy:nth-child(4) {
+    stroke: #BD0034;
+    animation-delay: -4s;
 }
 
-.text-copy:nth-child(5){
-	stroke: #FDB731;
-	animation-delay: -5s;
+.text-copy:nth-child(5) {
+    stroke: #FDB731;
+    animation-delay: -5s;
 }
 
-@keyframes stroke-offset{
-	100% {stroke-dashoffset: -35%;}
+@keyframes stroke-offset {
+    100% {
+        stroke-dashoffset: -35%;
+    }
 }
-
-
 
 .creditCardForm {
-    max-width: 700px;
+    max-width: 100%;
     background-color: #fff;
     // margin: 100px auto;
     overflow: auto;
     padding: 25px;
     color: #4c4e56;
 }
+
 .creditCardForm label {
     width: 100%;
     margin-bottom: 10px;
 }
+
 .creditCardForm .heading h1 {
     text-align: center;
     font-family: 'Open Sans', sans-serif;
     color: #4c4e56;
 }
+
 .creditCardForm .payment {
     float: left;
     font-size: 18px;
@@ -82,37 +85,46 @@ svg {
     margin-top: 20px;
     position: relative;
 }
+
 .creditCardForm .payment .form-group {
     float: left;
     margin-bottom: 15px;
 }
+
 .creditCardForm .payment .form-control {
     line-height: 40px;
     height: auto;
     padding: 0 16px;
 }
+
 .creditCardForm .owner {
     width: 63%;
     margin-right: 10px;
 }
+
 .creditCardForm .CVV {
     width: 35%;
 }
+
 .creditCardForm #card-number-field {
     width: 100%;
 }
+
 .creditCardForm #expiration-date {
     width: 49%;
 }
+
 .creditCardForm #credit_cards {
     width: 50%;
     margin-top: 25px;
     text-align: right;
 }
+
 .creditCardForm #pay-now {
     width: 100%;
     margin-top: 25px;
 }
+
 .creditCardForm .payment .btn {
     width: 100%;
     margin-top: 3px;
@@ -120,13 +132,16 @@ svg {
     background-color: #2ec4a5;
     color: white;
 }
+
 .creditCardForm .payment select {
     padding: 10px;
     margin-right: 15px;
 }
+
 .transparent {
     opacity: 0.2;
 }
+
 @media(max-width: 650px) {
     .creditCardForm .owner,
     .creditCardForm .CVV,
